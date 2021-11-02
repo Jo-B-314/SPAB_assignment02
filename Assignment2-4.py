@@ -45,6 +45,11 @@ def stirlingcycle(input):
         print("\n", end = '')
 
 ## PRINTING
+print("Enter n: ")
+n = int(input())
+print("Enter k: ")
+k = int(input())
+
 print('BINOMIAL')
 binomial(9)
 print('STIRLING SUBSET')
