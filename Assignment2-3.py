@@ -3,23 +3,23 @@ import math
 ##
 # Table of Binomial coefficients
 ##
-def binomial(input):
+def binomial(n,k):
 
-    for i in range(input+1):
+    for i in range(n+1):
         print('% 2d'% i, end = ' ')
         x = 1
-        for j in range(i+1):
+        for j in range(k+1):
             if i != 0 and j != 0:
                 x = x * (i-j + 1) / j
             print('% 4d'% x, end = ' ')
         print("\n", end = '')
 
 ## Stirling numbers
-def stirlingsubset(input):
-    for i in range(input+1):
+def stirlingsubset(n,k):
+    for i in range(n+1):
         print('% 2d'% i, end = ' ')
         x = 1
-        for j in range(i+1):
+        for j in range(k+1):
             if i != 0 and j != 0:
                 sum = 0
                 ##x = (pow(j,i)-j)/j hinten raus werte zu hoch
@@ -30,11 +30,11 @@ def stirlingsubset(input):
         print("\n", end = '')
 
 ## Stirling cycle numbers
-def stirlingcycle(input):
-    for i in range(input+1):
+def stirlingcycle(n,k):
+    for i in range(n+1):
         print('% 2d'% i, end = ' ')
         x = 1
-        for j in range(i+1):
+        for j in range(k+1):
             if i != 0 and j != 0:
                 sum = 0
                 ##x = (pow(j,i)-j)/j hinten raus werte zu hoch
@@ -51,8 +51,8 @@ print("Enter k: ")
 k = int(input())
 
 print('BINOMIAL')
-binomial(9)
+binomial(n,k)
 print('STIRLING SUBSET')
-stirlingsubset(9)
+stirlingsubset(n,k)
 print('STIRLING CYCLES')
-stirlingcycle(9)
+stirlingcycle(n,k)
